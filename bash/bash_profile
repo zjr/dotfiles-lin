@@ -22,3 +22,11 @@ do
 done
 
 unset files
+
+# Seems to be default location on Debian
+bash_completion_path="/etc/bash_completion"
+
+# Source Bash completion
+if [[ -r $bash_completion_path ]]; then
+    source $bash_completion_path
+fi
