@@ -35,6 +35,8 @@
     # Display the number of commits per author in numerical order
     who = shortlog -sn --
 
+    meld = !$HOME/.dotfiles/git/git-meld/git-meld.pl
+
 [color]
     # color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
     ui = auto

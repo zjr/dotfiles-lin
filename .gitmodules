@@ -8,3 +8,6 @@
 [submodule "bash/z"]
 	path = bash/z
 	url = git://github.com/rupa/z.git
+[submodule "git/git-meld"]
+	path = git/git-meld
+	url = git://github.com/wmanley/git-meld.git
