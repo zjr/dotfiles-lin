@@ -12,3 +12,11 @@ set completion-ignore-case on
 # through commands (i.e. more intelligent Up/Down behavior)
 "\e[B": history-search-forward
 "\e[A": history-search-backward
+
+# Ctrl-[left|right]-arrow word jumping
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
