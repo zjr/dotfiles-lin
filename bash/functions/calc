@@ -1,0 +1,6 @@
+#!/bin/bash
+
+## Simple calculator
+c () {
+  echo "scale=9; $@" | bc
+}
