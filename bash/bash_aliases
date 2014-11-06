@@ -17,6 +17,7 @@ alias gs="git status"
 
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
+alias ls="ls --color"
 # Long form no user group, color
 alias l="ls -oG"
 # Order by last modified, long form no user group, color
@@ -33,8 +34,8 @@ alias catn="cat -n"
 # alias c="pygmentize -O style=solarized -f console256 -g"
 
 # # IP addresses
-# alias ip='IP=`dig +short myip.opendns.com @resolver1.opendns.com`; growlnotify -s -a terminal -t "IP Address" -m "${IP}"'
-# alias lip='IP=`ipconfig getifaddr en0`; growlnotify -s -a terminal -t "Local IP" -m "${IP}"'
+alias ip='IP=`dig +short myip.opendns.com @resolver1.opendns.com`; echo "IP Address: ${IP}"'
+alias lip='IP=`ifconfig net0 | grep "inet " | cut -d " " -f2`; echo "Local IP: ${IP}"'
 
 # Copy my public key to the pasteboard
 alias pubkey="more ~/.ssh/id_rsa.pub | xclipc | printf '=> Public key copied to pasteboard.\n'"
@@ -56,6 +57,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | xclipc | printf '=> Public key copied to 
 
 # Shorten working directory
 alias dtrim='export PROMPT_DIRTRIM=2'
+
+# Tail first running forever process log.
+alias fortail='forever list | egrep -v "uid|info" | tr -s " " | cut -d " " -f3 | xargs -I uid tail -f ~/.forever/uid.log'
 
 # Update & Shutdown
 alias update='sudo apt-get update && sudo apt-get -y upgrade'
